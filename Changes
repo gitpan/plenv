@@ -1,0 +1,65 @@
+Revision history for Perl extension App::plenv
+
+1.4.5 2013-03-27T06:14:00Z
+
+    - Depend to Perl-Build 0.09
+
+1.4.4 2013-03-10T10:53:22
+
+    - Updated deps for Devel::PatchPerl and Perl::Build.
+      Latest version of Devel::PatchPerl removes deps for IPC::Cmd!
+      (tokuhirom)
+
+1.4.1 2013-02-07T11:50:56
+
+    - bundle IPC::Cmd
+    (This version is not uploaded to CPAN)
+
+1.4.0 2013-02-07T09:48:26
+
+    - bundle cpanm and just use it in `install-cpanm` command
+      (Reported by @turugina, and thanks to @miyagawa)
+    - Fix for parsing command line argument
+      - Loop for @D, @A, @U makes no sense
+      - Remove '--' if @ARGV contains it(See also Getopt::Long document).
+     (Syohei YOSHIDA)
+   - speciallize the shim file for cpanm. Speciallized version of 'cpanm'
+     shim runs rehashing after installing.
+     (tokuhirom)
+
+1.3.1 2013-01-24T11:56:38
+
+    [BUG FIX]
+    - expand ~ in --build-dir.
+      (tokuhirom)
+
+1.3.0 2013-01-24T11:28:10
+
+    - added '--build-dir' argumetns for plenv-install.
+      It helps to save object files for debugging with gdb.
+      (tokuhirom)
+
+1.2.1 2013-01-23T08:15:49
+
+    - fixed installation issue
+      (tokuhirom)
+
+1.2.0 2013-01-23T07:52:54
+
+    - added lots of documents
+      (tokuhirom)
+    - `global` command removes "perl-" prefix
+      `install` command removes "perl-" prefix but `global` doesn't.
+      (Masato Ikeda)
+
+
+1.1.0
+
+    - fixed broken path
+
+1.0.9
+
+    - first release to CPAN!
+
+0.0.1    Sat Jan 12 11:42:02 2013
+    - original version
