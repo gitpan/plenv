@@ -8,6 +8,7 @@ LICENSE
 META.json
 README.md
 author/make-bundle.sh
+bin/plenv
 cpanfile
 inc/Module/Build/Pluggable/Carton.pm
 lib/App/plenv.pm
@@ -27,7 +28,6 @@ lib/App/plenv/version.pod
 lib/App/plenv/versions.pod
 lib/App/plenv/which.pod
 minil.toml
-script/plenv
 t/00_compile.t
 t/01_bin.t
 t/02_deps.t
