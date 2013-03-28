@@ -29,7 +29,7 @@
          "requires" : {
             "App::cpanminus" : 0,
             "Devel::PatchPerl" : "0.84",
-            "Perl::Build" : ">= 0.09",
+            "Perl::Build" : "0.10",
             "Pod::Find" : 0,
             "Pod::Usage" : 0
          }
@@ -38,7 +38,7 @@
    "provides" : {
       "App::plenv" : {
          "file" : "lib/App/plenv.pm",
-         "version" : "v1.4.8"
+         "version" : "v1.4.9"
       }
    },
    "release_status" : "stable",
@@ -52,5 +52,5 @@
          "web" : "https://github.com/tokuhirom/plenv"
       }
    },
-   "version" : "1.4.8"
+   "version" : "1.4.9"
 }

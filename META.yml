@@ -19,15 +19,15 @@ name: plenv
 provides:
   App::plenv:
     file: lib/App/plenv.pm
-    version: v1.4.8
+    version: v1.4.9
 requires:
   App::cpanminus: 0
   Devel::PatchPerl: 0.84
-  Perl::Build: 0.09
+  Perl::Build: 0.10
   Pod::Find: 0
   Pod::Usage: 0
 resources:
   bugtracker: https://github.com/tokuhirom/plenv/issues
   homepage: https://github.com/tokuhirom/plenv
   repository: git://github.com/tokuhirom/plenv.git
-version: 1.4.8
+version: 1.4.9
