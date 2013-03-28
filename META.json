@@ -35,7 +35,12 @@
          }
       }
    },
-   "provides" : {},
+   "provides" : {
+      "App::plenv" : {
+         "file" : "lib/App/plenv.pm",
+         "version" : "v1.4.8"
+      }
+   },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
@@ -47,5 +52,5 @@
          "web" : "https://github.com/tokuhirom/plenv"
       }
    },
-   "version" : "1.4.7"
+   "version" : "1.4.8"
 }

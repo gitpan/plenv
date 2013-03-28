@@ -16,7 +16,10 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: plenv
-provides: {}
+provides:
+  App::plenv:
+    file: lib/App/plenv.pm
+    version: v1.4.8
 requires:
   App::cpanminus: 0
   Devel::PatchPerl: 0.84
@@ -27,4 +30,4 @@ resources:
   bugtracker: https://github.com/tokuhirom/plenv/issues
   homepage: https://github.com/tokuhirom/plenv
   repository: git://github.com/tokuhirom/plenv.git
-version: 1.4.7
+version: 1.4.8
