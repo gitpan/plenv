@@ -15,30 +15,39 @@
       "build" : {
          "requires" : {
             "Test::More" : "0.98",
-            "Test::Requires" : 0,
-            "lib::core::only" : 0
+            "Test::Requires" : "0",
+            "lib::core::only" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38",
-            "Module::Build::Pluggable" : "0.05"
+            "CPAN::Meta" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Wordlist::hanekomu" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spelling" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "App::cpanminus" : 0,
+            "App::cpanminus" : "0",
             "Devel::PatchPerl" : "0.84",
             "Perl::Build" : "0.10",
-            "Pod::Find" : 0,
-            "Pod::Usage" : 0
+            "Pod::Find" : "0",
+            "Pod::Usage" : "0"
          }
       }
    },
    "provides" : {
       "App::plenv" : {
          "file" : "lib/App/plenv.pm",
-         "version" : "v1.4.9"
+         "version" : "v1.4.10"
       }
    },
    "release_status" : "stable",
@@ -52,5 +61,5 @@
          "web" : "https://github.com/tokuhirom/plenv"
       }
    },
-   "version" : "1.4.9"
+   "version" : "1.4.10"
 }
