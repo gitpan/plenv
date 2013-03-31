@@ -1,7 +1,7 @@
 ---
 abstract: 'perl binary manager'
 author:
-  - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>'
+  - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
 build_requires:
   Test::More: 0.98
   Test::Requires: 0
@@ -19,15 +19,15 @@ name: plenv
 provides:
   App::plenv:
     file: lib/App/plenv.pm
-    version: v1.4.10
+    version: v1.4.11
 requires:
   App::cpanminus: 0
   Devel::PatchPerl: 0.84
-  Perl::Build: 0.10
+  Perl::Build: 0.13
   Pod::Find: 0
   Pod::Usage: 0
 resources:
   bugtracker: https://github.com/tokuhirom/plenv/issues
   homepage: https://github.com/tokuhirom/plenv
   repository: git://github.com/tokuhirom/plenv.git
-version: 1.4.10
+version: 1.4.11
