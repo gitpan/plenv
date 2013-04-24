@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno <tokuhirom@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.0.53",
+   "generated_by" : "Minilla/v0.0.56",
    "license" : "perl_5",
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -39,11 +39,10 @@
       },
       "develop" : {
          "requires" : {
-            "Pod::Wordlist::hanekomu" : "0",
             "Test::CPAN::Meta" : "0",
             "Test::MinimumVersion" : "0.10108",
             "Test::Pod" : "1.41",
-            "Test::Spelling" : "0"
+            "Test::Spellunker" : "v0.0.16"
          }
       },
       "runtime" : {
@@ -60,7 +59,7 @@
    "provides" : {
       "App::plenv" : {
          "file" : "lib/App/plenv.pm",
-         "version" : "v1.4.12"
+         "version" : "v1.4.13"
       }
    },
    "release_status" : "stable",
@@ -74,15 +73,15 @@
          "web" : "https://github.com/tokuhirom/plenv"
       }
    },
-   "version" : "1.4.12",
+   "version" : "1.4.13",
    "x_contributors" : [
       "Masato Ikeda <masato.ikeda@gmail.com>",
       "Nishibayashi Takuji <takuji31@gmail.com>",
-      "Syohei YOSHIDA <syohex@gmail.com>",
       "xaicron <xaicron@gmail.com>",
       "Kozaki, Tsuneaki <kozaki.tsuneaki@gmail.com>",
       "moznion <moznion@gmail.com>",
       "ks <ks-for-git@live.jp>",
-      "Tatsuhiko Miyagawa <miyagawa@bulknews.net>"
+      "Tatsuhiko Miyagawa <miyagawa@bulknews.net>",
+      "Syohei YOSHIDA <syohex@gmail.com>"
    ]
 }
