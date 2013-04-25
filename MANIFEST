@@ -27,11 +27,11 @@ minil.toml
 t/00_compile.t
 t/01_bin.t
 t/02_deps.t
-t/03_executable.t
 t/perl-dummy.tar.gz
 t/perl-dummy/Configure
 t/perl-dummy/hints/darwin.sh
 t/perl-dummy/patchlevel.h
 xt/02_perlcritic.t
+xt/03_executable.t
 META.yml
 MANIFEST
