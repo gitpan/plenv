@@ -29,12 +29,12 @@ no_index:
 provides:
   App::plenv:
     file: lib/App/plenv.pm
-    version: v1.4.15
+    version: v1.5.0
 requires:
   App::cpanminus: 0
-  Devel::PatchPerl: 0.86
+  Devel::PatchPerl: 0.88
   Getopt::Long: 0
-  Perl::Build: 0.13
+  Perl::Build: 0.20
   Pod::Find: 0
   Pod::Usage: 0
   perl: 5.008002
@@ -42,7 +42,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/plenv/issues
   homepage: https://github.com/tokuhirom/plenv
   repository: git://github.com/tokuhirom/plenv.git
-version: 1.4.15
+version: 1.5.0
 x_contributors:
   - 'Masato Ikeda <masato.ikeda@gmail.com>'
   - 'Nishibayashi Takuji <takuji31@gmail.com>'

@@ -10,7 +10,7 @@ use lib File::Spec->catdir($FindBin::RealBin, '..', 'share', 'plenv', 'lib', 'pe
 use File::Path qw(mkpath rmtree);
 use Getopt::Long;
 
-our $VERSION = '1.4.15';
+our $VERSION = '1.5.0';
 
 my $PLENV_HOME;
 my $LOCAL = "@{[ File::Spec->rel2abs($FindBin::RealBin) ]}/../share/plenv/";
@@ -265,6 +265,7 @@ sub install {
     my $stuff = shift @ARGV;
 
     require Perl::Build;
+    Perl::Build->VERSION(0.18);
     require Getopt::Long;
 
     my $installation_name;
@@ -284,6 +285,7 @@ sub install {
         'D=s@' => \@D,
         'A=s@' => \@A,
         'U=s@' => \@U,
+        'j|jobs=i' => \my $jobs,
     );
 
     shift @ARGV if @ARGV >= 1 && $ARGV[0] eq '--';
@@ -303,15 +305,12 @@ sub install {
 
     require POSIX;
 
-    my $remove_build_dir = 0;
     if ($build_dir) {
         # do not remove if user provides --build-dir parameter.
-        $remove_build_dir = 0;
         # expand ~ in directory path.
         $build_dir =~ s!~!glob("~")!ge;
     } else {
-        $remove_build_dir = 1;
-        $build_dir = File::Spec->catdir(File::Spec->tmpdir(), POSIX::strftime("perl-build-%Y%m%d-%H%M%S$$", localtime()));
+        $build_dir = File::Spec->catdir($PLENV_HOME, 'build');
     }
     print "Creating $build_dir(building directory)\n";
     mkpath($build_dir);
@@ -339,6 +338,7 @@ sub install {
                 dst_path => $dst_path,
                 configure_options => \@configure_options,
                 test => $test,
+                jobs => $jobs,
             )
         );
 
@@ -368,18 +368,12 @@ sub install {
                 dst_path => $dst_path,
                 configure_options => \@configure_options,
                 test => $test,
+                jobs => $jobs,
             )
         );
         Perl::Build->symlink_devel_executables(
             File::Spec->catdir($dst_path, 'bin'),
         );
-    }
-
-    # build dir was not useful after install successfully.
-    # And, do not remove working directory when user specified.
-    # Because hackers need to save object file for debugging with gdb.
-    if ($remove_build_dir) {
-        rmtree($build_dir);
     }
 }
 
