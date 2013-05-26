@@ -20,6 +20,7 @@ lib/App/plenv/list.pod
 lib/App/plenv/local.pod
 lib/App/plenv/migrate-modules.pod
 lib/App/plenv/rehash.pod
+lib/App/plenv/uninstall.pod
 lib/App/plenv/version.pod
 lib/App/plenv/versions.pod
 lib/App/plenv/which.pod
